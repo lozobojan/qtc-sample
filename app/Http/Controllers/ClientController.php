@@ -6,7 +6,6 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 Use RealRashid\SweetAlert\Facades\Alert;
-use App\Enums\ClientType;
 use App\Http\Requests\ClientRequest;
 use App\Models\Client;
 
