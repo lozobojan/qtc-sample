@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\Enums\ClientType;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Enum;
 
 class ClientRequest extends FormRequest
 {
@@ -23,7 +24,7 @@ class ClientRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'type_of_client' =>         ['required'],
+            'type_of_client' =>         ['required', new Enum(ClientType::class)],
             'company_name' =>           ['required', 'min:2'],
             'company_email' =>          ['required', 'email'],
             'date_of_birth' =>          ['nullable'],
