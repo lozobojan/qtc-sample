@@ -4,6 +4,7 @@ To run the app follow the steps below:
 
 - [ ] Clone this repository
 - [ ] Run `composer install` command to download and install the dependencies
+- [ ] Run `npm install && npm run build` command to download and install JS and CSS files
 - [ ] Copy the `.env.example` file into the new `.env` file
 - [ ] Run `php artisan key:generate` command to generate a new application key
 - [ ] Create a new MySQL database. You can call it a name you want. I suggest `qtc_sample`
