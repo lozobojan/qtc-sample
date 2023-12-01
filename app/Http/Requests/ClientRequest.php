@@ -33,15 +33,15 @@ class ClientRequest extends FormRequest
     }
     public function messages(): array{
         return [
-            'type_of_client.required' => 'Please select type of Client.',
-            'company_name.required' => 'Please enter a name.',
-            'company_name.min' => 'Please enter a valid name.',
-            'company_email.required' => 'Please enter an email.',
-            'company_email.email' => 'Please enter a valid email',
-            'contact_name.required' => 'Please enter Contact name.',
-            'contact_name.min' => 'Please enter valid Contact name.',
-            'contact_email.required' => 'Please enter Contact email.',
-            'contact_email.email' => 'Please enter valid Contact email.'
+            'type_of_client.required' =>    'Please select type of Client.',
+            'company_name.required' =>      'Please enter a name.',
+            'company_name.min' =>           'Please enter a valid name.',
+            'company_email.required' =>     'Please enter an email.',
+            'company_email.email' =>        'Please enter a valid email',
+            'contact_name.required' =>      'Please enter Contact name.',
+            'contact_name.min' =>           'Please enter valid Contact name.',
+            'contact_email.required' =>     'Please enter Contact email.',
+            'contact_email.email' =>        'Please enter valid Contact email.'
         ];
     }
 }
