@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\ClientType;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ClientRequest extends FormRequest
@@ -43,5 +44,16 @@ class ClientRequest extends FormRequest
             'contact_email.required' =>     'Please enter Contact email.',
             'contact_email.email' =>        'Please enter valid Contact email.'
         ];
+    }
+
+    public function passedValidation($key = null, $default = null): void{
+        $this->merge([
+            'date_of_birth' => $this->get('type_of_client') == ClientType::PERSON->value
+                ? $this->get('date_of_birth')
+                : NULL,
+            'registration_number' => $this->get('type_of_client') == ClientType::COMPANY->value
+                ? $this->get('registration_number')
+                : NULL,
+        ]);
     }
 }

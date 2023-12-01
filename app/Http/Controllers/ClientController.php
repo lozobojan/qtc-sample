@@ -57,19 +57,7 @@ class ClientController extends Controller
      */
     public function update(ClientRequest $request, Client $client): RedirectResponse
     {
-        $client->update([
-            'company_name' => $request->get('company_name'),
-            'company_email' => $request->get('company_email'),
-            'date_of_birth' => $request->get('type_of_client') == ClientType::PERSON->value
-                ? $request->get('date_of_birth')
-                : NULL,
-            'registration_number' => $request->get('type_of_client') == ClientType::COMPANY->value
-                ? $request->get('registration_number')
-                : NULL,
-            'contact_name' => $request->get('contact_name'),
-            'contact_email' => $request->get('contact_email'),
-            'type_of_client' => $request->get('type_of_client')
-        ]);
+        $client->update($request->validated());
         Alert::success('Client details edited successfully');
 
         return redirect()->route('clients.index');
