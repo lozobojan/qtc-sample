@@ -44,7 +44,7 @@
                         </td>
                         <td class="px-2 py-3">
                             <div>
-                                <p>{{ $client->type_of_client }}</p>
+                                {{ $client->type_of_client }}
                             </div>
                         </td>
                         <td class="px-2 py-3">
@@ -62,7 +62,8 @@
 
                         <td class="flex items-center justify-center space-x-4 text-sm">
                             <form action="{{ route('clients.destroy', ['client' => $client]) }}" method="POST"
-                                  id="deleteForm-{{ $client->id }}">
+                                  id="deleteForm-{{ $client->id }}"
+                            >
                                 @csrf
                                 @method('DELETE')
                                 <button

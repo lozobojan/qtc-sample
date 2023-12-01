@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('company_email');
             $table->timestamp('date_of_birth')->nullable();
             $table->string('registration_number')->nullable();
+            $table->string('affiliate_code')->nullable();
             $table->string('contact_name');
             $table->string('contact_email');
             $table->timestamps();
