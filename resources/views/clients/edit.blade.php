@@ -95,7 +95,7 @@
                         <input id="type_of_client_input" type="date"
                                class="block w-full mt-1 text-sm   focus:border-purple-400 focus:outline-none focus:shadow-outline-purple   form-input"
                                name="date_of_birth"
-                               value="{{ $client->date_of_birth ? \Carbon\Carbon::parse($client->date_of_birth)->format('Y-m-d') : '' }}"
+                               value="{{ $client->date_of_birth ? $client->date_of_birth->format('Y-m-d') : '' }}"
                         />
                     @elseif($client->registration_number || $client->type_of_client == \App\Enums\ClientType::COMPANY->value)
                         <span class="text-gray-700 " id="type_of_client_span">Company registration number</span>
