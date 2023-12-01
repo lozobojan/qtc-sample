@@ -19,9 +19,9 @@
             <table class="my-auto mx-auto w-full whitespace-no-wrap">
                 <thead>
                 <tr class="text-xs font-semibold tracking-wide text-left text-white uppercase border-b  bg-purple-600">
-                    <th class="px-2 py-3 text-center">Company</th>
-                    <th class="px-2 py-3 ">Company email</th>
-                    <th class="px-2 py-3 ">Type</th>
+                    <th class="px-2 py-3">Company</th>
+                    <th class="px-2 py-3">Company email</th>
+                    <th class="px-2 py-3">Type</th>
                     <th class="px-2 py-3">Contact name</th>
                     <th class="px-2 py-3">Contact email</th>
                     <th class="px-2 py-3">Delete</th>
